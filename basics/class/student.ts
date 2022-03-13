@@ -1,6 +1,8 @@
 import { getFortune, getLuckyNumber } from '../utils/fortune';
 
-export class Student {
+export const add = (n1 : number, n2 : number) => n1 + n2;
+
+export default class Student {
     // private firstName : string;
     // private lastName : string;
     // private age : number;

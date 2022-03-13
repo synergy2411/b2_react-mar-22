@@ -1,7 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Student = void 0;
+exports.add = void 0;
 const fortune_1 = require("../utils/fortune");
+const add = (n1, n2) => n1 + n2;
+exports.add = add;
 class Student {
     // private firstName : string;
     // private lastName : string;
@@ -26,4 +28,4 @@ class Student {
         return (0, fortune_1.getLuckyNumber)();
     }
 }
-exports.Student = Student;
+exports.default = Student;

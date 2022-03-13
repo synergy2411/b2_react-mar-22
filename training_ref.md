@@ -24,3 +24,21 @@ Breaka -> 5:00 - 5:15 (15 minutes)
 
 > to generate tsconfig.json
 - npx tsc --init
+- npm install typescript -g
+- tsc --watch
+
+
+
+https://github.com/synergy2411/b2_react-mar-22
+
+
+Special value -> "undefined"
+
+"null" -> user
+
+null === undefined          // false
+
+
+x === null;
+
+x === undefined;
