@@ -25,10 +25,11 @@ const ExpenseList = () => {
   const changeShowComp = () => setShowComp(!showComp);
 
   const onAddExpense = (expense: IExpense) => {
-    console.log("New Expense : ", expense);
     setExpenses([expense, ...expenses])
     setShowComp(false);
   };
+
+  const onCancelForm = () => setShowComp(false);
 
   return (
     <div className="container">
@@ -44,12 +45,11 @@ const ExpenseList = () => {
       </div>
       <div className="row">
         <div className="col-12">
-          {showComp && <NewExpense addExpense={onAddExpense} />}
+          {showComp && <NewExpense addExpense={onAddExpense} cancelForm={onCancelForm} />}
         </div>
       </div>
       <div className="row">
-        <ExpenseItem expense={expenses[0]} />
-        <ExpenseItem expense={expenses[1]} />
+          {expenses.map((expense : IExpense) => <ExpenseItem expense={expense} key={expense.id}/>)}
       </div>
     </div>
   );

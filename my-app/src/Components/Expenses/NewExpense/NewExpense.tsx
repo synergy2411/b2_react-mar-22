@@ -2,7 +2,10 @@ import React, { useState } from "react";
 import { IExpense } from "../../../model/expense.model";
 import { v4 } from "uuid";
 
-const NewExpense : React.FC<{addExpense : (expense : IExpense) => void }> = (props) => {
+const NewExpense : React.FC<{
+    addExpense : (expense : IExpense) => void,
+    cancelForm : () => void
+}> = (props) => {
     
     const [enteredTitle, setEnteredTitle] = useState<string>('initial value');
     const [enteredAmount, setEnteredAmount] = useState<string>('');
@@ -22,6 +25,8 @@ const NewExpense : React.FC<{addExpense : (expense : IExpense) => void }> = (pro
         }
         props.addExpense(expense)
     }
+
+    const cancelForm = () => props.cancelForm();
 
     return (
         <div className="row">
@@ -67,7 +72,8 @@ const NewExpense : React.FC<{addExpense : (expense : IExpense) => void }> = (pro
                                             type="submit">Add Expense</button>
                                         </div>
                                     <div className="col-6">
-                                        <button className="btn btn-warning btn-block">Cancel</button>
+                                        <button className="btn btn-warning btn-block"
+                                            type="button" onClick={cancelForm}>Cancel</button>
                                         </div>
                                     </div>
                                 </div>
