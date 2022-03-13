@@ -12,11 +12,11 @@ function App() {
   return (
     <div className="container">
      <p>Hello React!!</p>
-     <button onClick={changeState}>Change State</button>
+     {/* <button onClick={changeState}>Change State</button> */}
      <br />
      <ExpenseList />
-     <hr />
-     {showComp && <Todos />} 
+     {/* <hr />
+     {showComp && <Todos />}  */}
     </div>
   );
 }
