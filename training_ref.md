@@ -42,3 +42,34 @@ null === undefined          // false
 x === null;
 
 x === undefined;
+
+
+# React : render the UI quickly
+# ReactDOM : DOM API
+# ReactScripts : runs script for react app
+# Webpack-dev-server
+# CreateReactApp : CLI tool
+> npx create-react-app my-app --template typescript
+> cd my-app
+> npm start
+
+
+# DOM : Document Object Model -> hierarchical structure oh HTML Page/Elements
+html
+    head
+        script
+        meta
+        title
+    body
+        div
+            p
+            img
+            ul
+                li
+                    a
+
+
+
+# React App
+-> Write JSX -> converted into JavaSCript -> Creates Virtual DOM -> Renders the Real DOM
+    -> Model Changes -> React compares both VDOM -> update the Real DOM with minimal changes
