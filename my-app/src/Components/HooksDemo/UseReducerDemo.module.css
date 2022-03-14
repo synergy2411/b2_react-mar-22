@@ -1,0 +1,7 @@
+.my-list{
+    transition: all 0.4s ease-in-out;
+}
+.my-list:hover{
+    cursor: pointer;
+    background-color: beige;
+}
