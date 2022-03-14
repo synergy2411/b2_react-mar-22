@@ -4,6 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import ExpenseList from './Components/Expenses/Expenses';
 import Todos from './Components/ClassBased/ClassBased';
 import Login from './Components/Login/Login';
+import UseEffectDemo from './Components/HooksDemo/UseEffectDemo';
 
 function App() {
   const [showComp, setShowComp] = useState<boolean>(true)
@@ -13,7 +14,8 @@ function App() {
   return (
     <div className="container">
      <p>Hello React!!</p>
-     <Login />
+     <UseEffectDemo />
+     {/* <Login /> */}
      {/* <button onClick={changeState}>Change State</button> */}
      <br />
      <ExpenseList />
