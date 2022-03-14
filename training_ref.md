@@ -109,3 +109,24 @@ const [state, dipatcherFn] = useReducer(reducerFn, intialState)
 
 
 # useContext : consumes Context API
+
+
+
+# What is GraphQL ?
+- Specifications
+- Single endpoint
+- NO Over-fetching / under-fetching
+- 3 Operations - 
+: Query - fetch the date
+: Mutation - Create, Update, Delete
+: Subscription : Socket programming
+
+-> posts -> id, title, body, published
+
+>  npm i @apollo/client graphql
+
+# REST Endpoints
+ /posts -> id, title, body, published, author
+ /comments -> id, text, author, postId
+
+ Post-> id title, body, comment, author

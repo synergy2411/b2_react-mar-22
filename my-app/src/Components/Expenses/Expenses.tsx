@@ -45,7 +45,7 @@ const ExpenseList = () => {
   );
 
   return (
-    <AuthContext.Provider value={{isAuthenticated : true}}>
+    <AuthContext.Provider value={{isAuthenticated : true, createAt : expenses[0].createdAt}}>
     <div className="container">
       <div className="row">
         <div className="col-4 offset-4">

@@ -4,6 +4,7 @@ import AuthContext from "../../../Context/AuthContext";
 const ExpenseDate : React.FC<{createdAt : Date}> = (props) => {
 
     const context = useContext(AuthContext)
+    console.log(context);
 
     const day = props.createdAt.toLocaleString("en-US", { day : "numeric"});
     const month = props.createdAt.toLocaleString("en-US", { month : "long"});
@@ -21,7 +22,5 @@ const ExpenseDate : React.FC<{createdAt : Date}> = (props) => {
         //     }}
         // </AuthContext.Consumer>
     )
-
-
 }
 export default ExpenseDate;
