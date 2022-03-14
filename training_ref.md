@@ -104,3 +104,8 @@ html
 - State : Object to persist
 
 const [state, dipatcherFn] = useReducer(reducerFn, intialState)
+
+
+
+
+# useContext : consumes Context API

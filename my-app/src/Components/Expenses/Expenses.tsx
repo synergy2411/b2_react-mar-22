@@ -3,6 +3,7 @@ import { IExpense } from "../../model/expense.model";
 import ExpenseFilter from "./ExpenseFilter/ExpenseFilter";
 import ExpenseItem from "./ExpenseItem/ExpenseItem";
 import NewExpense from "./NewExpense/NewExpense";
+import AuthContext from "../../Context/AuthContext";
 
 const EXPENSE_DATA = [
   {
@@ -44,6 +45,7 @@ const ExpenseList = () => {
   );
 
   return (
+    <AuthContext.Provider value={{isAuthenticated : true}}>
     <div className="container">
       <div className="row">
         <div className="col-4 offset-4">
@@ -70,6 +72,7 @@ const ExpenseList = () => {
         )}
       </div>
     </div>
+    </AuthContext.Provider>
   );
 };
 export default ExpenseList;
