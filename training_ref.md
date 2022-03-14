@@ -76,3 +76,31 @@ html
 
 
     > npm i uuid @types/uuid
+
+# Form Validation Libraries
+- formik
+- react-hook-form
+
+
+# React Library - to render UI quickly
+# useEffect() - to run side effects
+- Flavours
+: useEffect(callbackFn) - callbackFn will be called at initial loading and subsequent rendering
+
+: useEffect(callbackFn, []) -> componentDidMount - callbackFn will called at initial rendering only
+
+: useEffect(callbackFn, [Dependencies]) -> componentDidUpdate - callbackFn will be called at initial rendering and whenever the dependencies change.
+
+: useEffect(callbackFn => cleanupFn, [Dependency]) -> componentWillUnmount - callbackFn will be called at initial rendering and for the subsequent re-rendering the cleanupFn will fire before the callbackFn.
+
+
+# useReducer -> one state depends on another state
+# implments Redux pattern at component level
+# Primary building blocks ->
+- Reducer : Pure function; no side-effect eg. Date.now() / Math.random();
+    (prevState, action) => newState
+- Action : payload of information; defined what happened in your component; 
+    { type, data? }
+- State : Object to persist
+
+const [state, dipatcherFn] = useReducer(reducerFn, intialState)
