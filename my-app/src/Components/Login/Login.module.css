@@ -1,0 +1,9 @@
+.invalid{
+    background-color: salmon;
+    transition: all 0.4s ease-in;
+}
+
+.valid{
+    background-color: aquamarine;
+    transition: all 0.4s ease-in;
+}

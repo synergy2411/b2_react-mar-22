@@ -73,3 +73,6 @@ html
 # React App
 -> Write JSX -> converted into JavaSCript -> Creates Virtual DOM -> Renders the Real DOM
     -> Model Changes -> React compares both VDOM -> update the Real DOM with minimal changes
+
+
+    > npm i uuid @types/uuid

@@ -1,8 +1,11 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
+import classes from "./Login.module.css";
 
 const Login = () => {
     const usernameInputRef =  useRef<HTMLInputElement>(null);
     const passwordInputRef = useRef<HTMLInputElement>(null)
+
+    const [isValid, setIsValid] = useState<boolean>(true)
 
     const submitHandler = (event : React.FormEvent) => {
         event.preventDefault();
@@ -10,6 +13,13 @@ const Login = () => {
         console.log("Password : ", passwordInputRef.current!.value)
     }
 
+    const isValidUsername = () => {
+        if(usernameInputRef.current!.value.includes('@')){
+            setIsValid(true)
+        }else{
+            setIsValid(false)
+        }
+    }
     return (
         <div className="row">
             <div className="col-6 offset-3">
@@ -21,8 +31,12 @@ const Login = () => {
                                 <label htmlFor="username">Username :</label>
                                 <input type="text" 
                                     name="username" 
-                                    className="form-control"
-                                    ref = {usernameInputRef}/>
+                                    className={`form-control ${isValid ? classes.valid : classes.invalid}`}
+                                    ref = {usernameInputRef}
+                                    onBlur={isValidUsername}/>
+                                    {!isValid && <p className="alert alert-danger">
+                                        Username should be proper email format 
+                                        </p>}
                             </div>
                             {/* password */}
                             <div className="form-group">
@@ -37,6 +51,7 @@ const Login = () => {
                                 <div className="row">
                                     <div className="col-6">
                                     <button className="btn btn-primary btn-block"
+                                        disabled={!isValid}
                                         type="submit">Login</button>
                                     </div>
                                     <div className="col-6">
