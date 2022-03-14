@@ -130,3 +130,18 @@ const [state, dipatcherFn] = useReducer(reducerFn, intialState)
  /comments -> id, text, author, postId
 
  Post-> id title, body, comment, author
+
+
+
+ # useSelector -> Redux library -> App Level
+ # useReducer -> React hook -> Component Level
+
+ # useMemo / useCallback - Optimization Techniques
+ # Unit Testing - Mocking Data
+ # Routing
+ # Deployment - HttpServer / Firebase / IIS Server
+
+ # Higher Order Component -> 
+ - Functions receives the component as its parameter and return the updated component
+
+ const UpdatedComp = HigherOrderComp(originalComponent)

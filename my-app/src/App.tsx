@@ -8,6 +8,8 @@ import UseEffectDemo from "./Components/HooksDemo/UseEffectDemo";
 import UseReducerDemo from "./Components/HooksDemo/UseReducderDemo";
 import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
 import CharacterList from "./Components/CharacterList/CharacterList";
+import Counter from "./Components/Counter/Counter";
+import HoverCounter from "./Components/Counter/HoverCounter";
 
 const apolloClient = new ApolloClient({
   uri: "https://rickandmortyapi.com/graphql",
@@ -22,7 +24,10 @@ function App() {
   return (
     <ApolloProvider client={apolloClient}>
       <div className="container">
-        <CharacterList />
+          <HoverCounter />
+          <hr />
+          <Counter />
+        {/* <CharacterList /> */}
         {/* <UseReducerDemo /> */}
         {/* <UseEffectDemo /> */}
         {/* <Login /> */}
