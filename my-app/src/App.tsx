@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Route, Switch } from 'react-router-dom';
+import { Redirect, Route, Switch } from 'react-router-dom';
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import ExpenseList from "./Components/Expenses/Expenses";
@@ -14,6 +14,7 @@ import HoverCounter from "./Components/Counter/HoverCounter";
 import Posts from "./Pages/Posts/Posts";
 import PostItem from "./Pages/Posts/PostItem/PostItem";
 import Header from "./Components/Header/Header";
+import MyAlertBox from "./Components/AlertBox/AlertBox";
 
 const apolloClient = new ApolloClient({
   uri: "https://rickandmortyapi.com/graphql",
@@ -32,7 +33,13 @@ function App() {
         <br />
 
       <Switch>
-      <Route path="/posts/:postId">
+        <Route path="/" exact>
+          {/* {isAuthenciated && <Redirect to="/posts"/>} */}
+        </Route>
+        <Route path="/posts/alert/:postId">
+          <MyAlertBox />
+        </Route>
+      <Route path="/posts/post/:postId">
         <PostItem/>
       </Route>
 
