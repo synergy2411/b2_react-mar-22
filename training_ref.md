@@ -145,8 +145,8 @@ const UpdatedComp = HigherOrderComp(originalComponent)
 
  # Routing - react-router-dom
  # Unit Testing - Mocking Data
- # useMemo / useCallback - Optimization Techniques
  # Deployment - HttpServer / Firebase / IIS Server
+ # useMemo / useCallback - Optimization Techniques
  
 
  # Why, What SPA?
@@ -187,3 +187,13 @@ const UpdatedComp = HigherOrderComp(originalComponent)
  > firebase init
 
  > firebase deploy
+
+
+ # React Hooks
+ - useCallback - for reference equality checking of function
+ - useMemo - for reference equality checking of function returned value
+
+ useCallback(cb, []) === useMemo(cb => fn(), [])
+
+
+synergy2411@outlook.com
