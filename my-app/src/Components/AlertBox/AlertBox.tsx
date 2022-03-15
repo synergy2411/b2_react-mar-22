@@ -21,7 +21,7 @@ const MyAlertBox = () => {
     return (
         <div className={classes.backdrop}>
             <div className={classes["alert-box"]}>
-                <p className='lead'>Are you sure to delete?</p>
+                <p className='lead'>Are you sure to delete - {title?.toUpperCase()}?</p>
                 <div className="row">
                     <div className="col-6">
                         <button className="btn btn-danger btn-block" onClick={onDeletePost}>Yes, please</button>
