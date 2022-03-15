@@ -13,6 +13,7 @@ import Counter from "./Components/Counter/Counter";
 import HoverCounter from "./Components/Counter/HoverCounter";
 import Posts from "./Pages/Posts/Posts";
 import PostItem from "./Pages/Posts/PostItem/PostItem";
+import Header from "./Components/Header/Header";
 
 const apolloClient = new ApolloClient({
   uri: "https://rickandmortyapi.com/graphql",
@@ -27,6 +28,8 @@ function App() {
   return (
     <ApolloProvider client={apolloClient}>
       <div className="container">
+        <Header />
+        <br />
 
       <Switch>
       <Route path="/posts/:postId">
@@ -43,6 +46,9 @@ function App() {
 
       <Route path="/login">
         <Login />
+      </Route>
+      <Route path="/characters">
+        <CharacterList />
       </Route>
       </Switch>
           {/* <HoverCounter />

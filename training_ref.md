@@ -160,3 +160,14 @@ const UpdatedComp = HigherOrderComp(originalComponent)
  - npm install json-server -g
  - Create json file
  - json-server --watch <filename.json>
+
+
+ # AJAX - to create SPA
+ - jQuery library
+ - Fetch(url)
+ - HttpCLientModule - XHR - XMLHttpRequest - JSON/XML Object
+ - http://our-domain.com/index/products/p001 -> Remote Server / Cloud -> Serves the index.html (SPA) as response
+ - All routes defined on HTML file
+ - App Model -> from REST Endpoints
+
+ > npm start -> Webpack-dev-server runs -> servers HTML file
