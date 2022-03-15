@@ -1,13 +1,14 @@
 import React from "react";
 import useSingleCharacter from "../../../Hook/useSingleCharacter";
 import { IEpisode } from "../../../model/episode.model";
+import MySpinner from "../../Spinner/Spinner";
 import classes from './CharacterSelected.module.css';
 
 const CharacterSelected : React.FC<{id: string, onClose : () => void}> = (props) => {
 
     const {loading, error, data} = useSingleCharacter(props.id)
 
-    if(loading) return <p>Loading...</p>
+    if(loading) return <MySpinner />
     if(error) return <p>error...</p>
     console.log(data);
     return (

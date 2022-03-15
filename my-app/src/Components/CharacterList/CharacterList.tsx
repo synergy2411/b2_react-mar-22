@@ -1,11 +1,12 @@
 import useCharacter from "../../Hook/useCharacter";
 import { ICharacter } from "../../model/character.model";
+import MySpinner from "../Spinner/Spinner";
 import Character from "./Character/Character";
 
 const CharacterList = () => {
   const { loading, error, data } = useCharacter();
 
-  if (loading) return <p>Loading....</p>;
+  if (loading) return <MySpinner />;
   if (error) return <p>Error....</p>;
 
   return (

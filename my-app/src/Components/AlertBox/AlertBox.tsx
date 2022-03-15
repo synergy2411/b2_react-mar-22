@@ -1,8 +1,13 @@
 import axios from 'axios';
-import { useHistory, useParams } from 'react-router-dom';
+import { useHistory, useLocation, useParams } from 'react-router-dom';
 import classes from './AlertBox.module.css';
 
 const MyAlertBox = () => {
+    const location = useLocation()
+    const query  = new URLSearchParams(location.search)         // ?searchTerm=Value
+    const title = query.get("title")
+    console.log( "Title : " , title);
+    
     const history = useHistory()
     const params = useParams<{postId : string}>();
 

@@ -14,7 +14,7 @@ const PostItem  = () => {
     }, [])
 
     const onLoadAlert= () => {
-        histroy.push("/posts/alert/"+post?.id)
+        histroy.push("/posts/alert/"+post?.id+"?title="+post?.title)
     }
     return (
         <div>

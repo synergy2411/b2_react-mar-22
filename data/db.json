@@ -1,10 +1,28 @@
 {
   "posts": [
     {
-      "title": "new title",
-      "body": "...",
-      "published": false,
-      "id": "p0101"
+      "id": "p001",
+      "title": "Title 1"
+    },
+    {
+      "id": "p002",
+      "title": "Title 2"
+    },
+    {
+      "id": "p003",
+      "title": "Title 3"
+    },
+    {
+      "id": "17b7e02d-de0d-40dc-a5c2-b5406a66de77",
+      "title": "title 4"
+    },
+    {
+      "id": "02a5a8df-4b04-463f-be00-8a753b64277c",
+      "title": "title 5"
+    },
+    {
+      "id": "fe23fd31-6a39-4014-919b-c1cedc57fca8",
+      "title": "title 6"
     }
   ]
 }
