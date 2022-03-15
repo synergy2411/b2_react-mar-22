@@ -1,0 +1,10 @@
+{
+  "posts": [
+    {
+      "id": "p001",
+      "title": "Awesome post 1",
+      "body": "...",
+      "published": false
+    }
+  ]
+}

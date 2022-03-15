@@ -136,12 +136,27 @@ const [state, dipatcherFn] = useReducer(reducerFn, intialState)
  # useSelector -> Redux library -> App Level
  # useReducer -> React hook -> Component Level
 
- # useMemo / useCallback - Optimization Techniques
- # Unit Testing - Mocking Data
- # Routing
- # Deployment - HttpServer / Firebase / IIS Server
 
  # Higher Order Component -> 
  - Functions receives the component as its parameter and return the updated component
+const UpdatedComp = HigherOrderComp(originalComponent)
 
- const UpdatedComp = HigherOrderComp(originalComponent)
+
+
+ # Routing - react-router-dom
+ # Unit Testing - Mocking Data
+ # useMemo / useCallback - Optimization Techniques
+ # Deployment - HttpServer / Firebase / IIS Server
+ 
+
+ # Why, What SPA?
+ - Better user experience
+ - less network bandwidth
+ - Routes handled at client side only
+
+ # Posts App
+
+ # to install json-server
+ - npm install json-server -g
+ - Create json file
+ - json-server --watch <filename.json>
